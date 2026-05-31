@@ -7,7 +7,7 @@ package org.lineageos.platform.internal;
 
 import android.content.Context;
 
-import lineageos.app.LineageContextConstants;
+import strixos.app.LineageContextConstants;
 
 /** @hide */
 public class LineageSettingsService extends LineageSystemService {

@@ -30,7 +30,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 
-import lineageos.providers.LineageSettings;
+import strixos.providers.LineageSettings;
 
 import org.lineageos.platform.internal.R;
 

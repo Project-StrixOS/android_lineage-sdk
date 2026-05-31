@@ -9,7 +9,7 @@ import android.app.KeyguardManager;
 import android.content.Context;
 import android.os.UserHandle;
 
-import lineageos.providers.LineageSettings;
+import strixos.providers.LineageSettings;
 
 public final class PowerMenuUtils {
     public static boolean isAdvancedRestartPossible(final Context context) {

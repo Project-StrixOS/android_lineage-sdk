@@ -18,9 +18,9 @@ import android.util.MathUtils;
 import android.util.Slog;
 import android.view.animation.LinearInterpolator;
 
-import lineageos.hardware.LineageHardwareManager;
-import lineageos.hardware.LiveDisplayManager;
-import lineageos.providers.LineageSettings;
+import strixos.hardware.LineageHardwareManager;
+import strixos.hardware.LiveDisplayManager;
+import strixos.providers.LineageSettings;
 
 import java.io.PrintWriter;
 import java.util.ArrayList;

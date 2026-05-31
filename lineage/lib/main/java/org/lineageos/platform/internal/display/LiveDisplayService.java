@@ -5,9 +5,9 @@
  */
 package org.lineageos.platform.internal.display;
 
-import static lineageos.hardware.LiveDisplayManager.MODE_FIRST;
-import static lineageos.hardware.LiveDisplayManager.MODE_LAST;
-import static lineageos.hardware.LiveDisplayManager.MODE_OFF;
+import static strixos.hardware.LiveDisplayManager.MODE_FIRST;
+import static strixos.hardware.LiveDisplayManager.MODE_LAST;
+import static strixos.hardware.LiveDisplayManager.MODE_OFF;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -29,11 +29,11 @@ import android.view.Display;
 import com.android.server.LocalServices;
 import com.android.server.ServiceThread;
 
-import lineageos.app.LineageContextConstants;
-import lineageos.hardware.HSIC;
-import lineageos.hardware.ILiveDisplayService;
-import lineageos.hardware.LiveDisplayConfig;
-import lineageos.providers.LineageSettings;
+import strixos.app.LineageContextConstants;
+import strixos.hardware.HSIC;
+import strixos.hardware.ILiveDisplayService;
+import strixos.hardware.LiveDisplayConfig;
+import strixos.providers.LineageSettings;
 
 import org.lineageos.platform.internal.LineageSystemService;
 import org.lineageos.platform.internal.common.UserContentObserver;
@@ -203,7 +203,7 @@ public class LiveDisplayService extends LineageSystemService {
 
             updateFeatures(ALL_CHANGED);
 
-            Intent intent = new Intent(lineageos.content.Intent.ACTION_INITIALIZE_LIVEDISPLAY);
+            Intent intent = new Intent(strixos.content.Intent.ACTION_INITIALIZE_LIVEDISPLAY);
             intent.setPackage("com.android.systemui");
             mContext.sendBroadcastAsUser(intent, UserHandle.SYSTEM);
         }
@@ -236,7 +236,7 @@ public class LiveDisplayService extends LineageSystemService {
         @Override
         public boolean setMode(int mode) {
             mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+                    strixos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
             if (!mConfig.hasModeSupport()) {
                 return false;
             }
@@ -251,7 +251,7 @@ public class LiveDisplayService extends LineageSystemService {
         @Override
         public boolean setColorAdjustment(float[] adj) {
             mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+                    strixos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
             return mDHC.setColorAdjustment(adj);
         }
 
@@ -263,7 +263,7 @@ public class LiveDisplayService extends LineageSystemService {
         @Override
         public  boolean setAutoContrastEnabled(boolean enabled) {
             mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+                    strixos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
             return mDHC.setAutoContrastEnabled(enabled);
         }
 
@@ -275,7 +275,7 @@ public class LiveDisplayService extends LineageSystemService {
         @Override
         public boolean setCABCEnabled(boolean enabled) {
             mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+                    strixos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
             return mDHC.setCABCEnabled(enabled);
         }
 
@@ -287,7 +287,7 @@ public class LiveDisplayService extends LineageSystemService {
         @Override
         public boolean setColorEnhancementEnabled(boolean enabled) {
             mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+                    strixos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
             return mDHC.setColorEnhancementEnabled(enabled);
         }
 
@@ -299,7 +299,7 @@ public class LiveDisplayService extends LineageSystemService {
         @Override
         public boolean setAutomaticOutdoorModeEnabled(boolean enabled) {
             mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+                    strixos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
             return mOMC.setAutomaticOutdoorModeEnabled(enabled);
         }
 
@@ -311,7 +311,7 @@ public class LiveDisplayService extends LineageSystemService {
         @Override
         public boolean setDayColorTemperature(int temperature) {
             mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+                    strixos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
             mCTC.setDayColorTemperature(temperature);
             return true;
         }
@@ -324,7 +324,7 @@ public class LiveDisplayService extends LineageSystemService {
         @Override
         public boolean setNightColorTemperature(int temperature) {
             mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+                    strixos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
             mCTC.setNightColorTemperature(temperature);
             return true;
         }
@@ -372,7 +372,7 @@ public class LiveDisplayService extends LineageSystemService {
         @Override
         public boolean setAntiFlickerEnabled(boolean enabled) {
             mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
+                    strixos.platform.Manifest.permission.MANAGE_LIVEDISPLAY, null);
             return mDHC.setAntiFlickerEnabled(enabled);
         }
     };

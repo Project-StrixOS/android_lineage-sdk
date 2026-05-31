@@ -22,7 +22,7 @@ import android.util.Slog;
 import android.view.KeyEvent;
 import android.view.ViewConfiguration;
 
-import lineageos.providers.LineageSettings;
+import strixos.providers.LineageSettings;
 
 import java.util.List;
 

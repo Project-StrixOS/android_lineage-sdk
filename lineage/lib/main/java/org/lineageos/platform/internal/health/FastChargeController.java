@@ -16,13 +16,13 @@ import android.util.Log;
 
 import com.android.internal.util.ArrayUtils;
 
-import lineageos.providers.LineageSettings;
+import strixos.providers.LineageSettings;
 
 import org.lineageos.platform.internal.health.LineageHealthFeature;
 import org.lineageos.platform.internal.R;
 
-import vendor.lineage.health.FastChargeMode;
-import vendor.lineage.health.IFastCharge;
+import vendor.strix.health.FastChargeMode;
+import vendor.strix.health.IFastCharge;
 
 import java.io.PrintWriter;
 import java.util.stream.IntStream;

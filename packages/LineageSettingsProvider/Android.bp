@@ -4,17 +4,21 @@
 //
 
 android_app {
-    name: "LineageSettingsProvider",
+    name: "LosSettingsProvider",
     srcs: ["src/**/*.java"],
     resource_dirs: ["res"],
 
     certificate: "platform",
     privileged: true,
-    privapp_allowlist: "org.lineageos.lineagesettings.xml",
+    privapp_allowlist: "org.strixos.lineagesettings.xml",
     platform_apis: true,
     system_ext_specific: true,
 
     static_libs: [
         "org.lineageos.platform.internal",
+    ],
+
+    aaptflags: [
+        "--rename-manifest-package", "com.android.lossettings",
     ],
 }

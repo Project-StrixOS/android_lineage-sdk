@@ -7,7 +7,7 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:androidprv="http://schemas.android.com/apk/prv/res/android"
-    package="lineageos.platform"
+    package="strixos.platform"
     coreApp="true" android:sharedUserId="android.uid.system"
     android:sharedUserLabel="@string/lineageos_system_label">
 
