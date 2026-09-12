@@ -13,7 +13,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.UserHandle;
 
-import lineageos.providers.LineageSettings;
+import strixos.providers.LineageSettings;
 
 import java.util.Arrays;
 import java.util.HashSet;

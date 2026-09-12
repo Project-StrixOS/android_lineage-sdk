@@ -13,11 +13,11 @@ import android.util.Range;
 import android.util.Slog;
 import android.util.SparseArray;
 
-import lineageos.hardware.DisplayMode;
-import lineageos.hardware.HSIC;
-import lineageos.hardware.LineageHardwareManager;
-import lineageos.hardware.LiveDisplayManager;
-import lineageos.providers.LineageSettings;
+import strixos.hardware.DisplayMode;
+import strixos.hardware.HSIC;
+import strixos.hardware.LineageHardwareManager;
+import strixos.hardware.LiveDisplayManager;
+import strixos.providers.LineageSettings;
 
 import java.io.PrintWriter;
 import java.util.ArrayList;

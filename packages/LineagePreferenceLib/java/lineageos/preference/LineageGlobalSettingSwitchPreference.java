@@ -9,7 +9,7 @@ package lineageos.preference;
 import android.content.Context;
 import android.util.AttributeSet;
 
-import lineageos.providers.LineageSettings;
+import strixos.providers.LineageSettings;
 
 public class LineageGlobalSettingSwitchPreference extends SelfRemovingSwitchPreference {
 

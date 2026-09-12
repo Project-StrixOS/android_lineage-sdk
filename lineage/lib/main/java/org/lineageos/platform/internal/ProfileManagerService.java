@@ -34,13 +34,13 @@ import android.util.Log;
 
 import com.android.internal.policy.IKeyguardService;
 
-import lineageos.app.IProfileManager;
-import lineageos.app.LineageContextConstants;
-import lineageos.app.NotificationGroup;
-import lineageos.app.Profile;
-import lineageos.app.ProfileGroup;
-import lineageos.app.ProfileManager;
-import lineageos.providers.LineageSettings;
+import strixos.app.IProfileManager;
+import strixos.app.LineageContextConstants;
+import strixos.app.NotificationGroup;
+import strixos.app.Profile;
+import strixos.app.ProfileGroup;
+import strixos.app.ProfileManager;
+import strixos.providers.LineageSettings;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -437,6 +437,9 @@ public class ProfileManagerService extends LineageSystemService {
             }
 
             mProfileNames.remove(old.getName());
+            if (profile.getName() == null) {
+                profile.setName("");
+            }
             mProfileNames.put(profile.getName(), profile.getUuid());
             mProfiles.put(profile.getUuid(), profile);
             /* no need to set mDirty, if the profile was actually changed,
@@ -555,6 +558,9 @@ public class ProfileManagerService extends LineageSystemService {
     };
 
     private void addProfileInternal(Profile profile) {
+        if (profile.getName() == null) {
+            profile.setName("");
+        }
         // Make sure this profile has all of the correct groups.
         for (NotificationGroup group : mGroups.values()) {
             ensureGroupInProfile(profile, group, false);
@@ -655,7 +661,7 @@ public class ProfileManagerService extends LineageSystemService {
 
     private void enforceChangePermissions() {
         mContext.enforceCallingOrSelfPermission(
-                lineageos.platform.Manifest.permission.MODIFY_PROFILES,
+                strixos.platform.Manifest.permission.MODIFY_PROFILES,
                 "You do not have permissions to change the Profile Manager.");
     }
 

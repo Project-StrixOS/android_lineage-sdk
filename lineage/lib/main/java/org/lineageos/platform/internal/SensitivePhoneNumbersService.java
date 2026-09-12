@@ -10,7 +10,7 @@ import android.content.pm.PackageManager;
 import android.os.Binder;
 import android.os.IBinder;
 
-import lineageos.app.LineageContextConstants;
+import strixos.app.LineageContextConstants;
 import com.android.server.telecom.ISensitivePhoneNumbers;
 
 import org.lineageos.lib.phone.SensitivePhoneNumbers;

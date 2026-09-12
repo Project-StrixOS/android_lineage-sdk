@@ -8,12 +8,12 @@ package org.lineageos.internal.util;
 import android.content.ContentResolver;
 import android.os.UserHandle;
 
-import lineageos.providers.LineageSettings;
+import strixos.providers.LineageSettings;
 
 public class DeviceKeysConstants {
     // Available custom actions to perform on a key press.
     // Must match values for KEY_HOME_LONG_PRESS_ACTION in:
-    //   sdk/src/java/lineageos/providers/LineageSettings.java
+    //   sdk/src/java/strixos.providers.LineageSettings.java
     public enum Action {
         NOTHING,
         MENU,

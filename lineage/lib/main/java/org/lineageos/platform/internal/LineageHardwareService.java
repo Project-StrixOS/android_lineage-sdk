@@ -18,9 +18,9 @@ import android.util.Log;
 import com.android.server.LocalServices;
 import com.android.server.display.color.DisplayTransformManager;
 
-import lineageos.app.LineageContextConstants;
-import lineageos.hardware.ILineageHardwareService;
-import lineageos.hardware.LineageHardwareManager;
+import strixos.app.LineageContextConstants;
+import strixos.hardware.ILineageHardwareService;
+import strixos.hardware.LineageHardwareManager;
 
 /** @hide */
 public class LineageHardwareService extends LineageSystemService {
@@ -175,10 +175,10 @@ public class LineageHardwareService extends LineageSystemService {
     @Override
     public void onBootPhase(int phase) {
         if (phase == PHASE_BOOT_COMPLETED) {
-            Intent intent = new Intent(lineageos.content.Intent.ACTION_INITIALIZE_LINEAGE_HARDWARE);
+            Intent intent = new Intent(strixos.content.Intent.ACTION_INITIALIZE_LINEAGE_HARDWARE);
             intent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND);
             mContext.sendBroadcastAsUser(intent, UserHandle.ALL,
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS);
+                    strixos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS);
         }
     }
 
@@ -196,14 +196,14 @@ public class LineageHardwareService extends LineageSystemService {
         @Override
         public int getSupportedFeatures() {
             mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+                    strixos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
             return mLineageHwImpl.getSupportedFeatures();
         }
 
         @Override
         public boolean get(int feature) {
             mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+                    strixos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
             if (!isSupported(feature)) {
                 Log.e(TAG, "feature " + feature + " is not supported");
                 return false;
@@ -214,7 +214,7 @@ public class LineageHardwareService extends LineageSystemService {
         @Override
         public boolean set(int feature, boolean enable) {
             mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+                    strixos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
             if (!isSupported(feature)) {
                 Log.e(TAG, "feature " + feature + " is not supported");
                 return false;
@@ -225,7 +225,7 @@ public class LineageHardwareService extends LineageSystemService {
         @Override
         public int[] getDisplayColorCalibration() {
             mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+                    strixos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
             if (!isSupported(LineageHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION)) {
                 Log.e(TAG, "Display color calibration is not supported");
                 return null;
@@ -236,7 +236,7 @@ public class LineageHardwareService extends LineageSystemService {
         @Override
         public boolean setDisplayColorCalibration(int[] rgb) {
             mContext.enforceCallingOrSelfPermission(
-                    lineageos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
+                    strixos.platform.Manifest.permission.HARDWARE_ABSTRACTION_ACCESS, null);
             if (!isSupported(LineageHardwareManager.FEATURE_DISPLAY_COLOR_CALIBRATION)) {
                 Log.e(TAG, "Display color calibration is not supported");
                 return false;

@@ -20,7 +20,7 @@ import android.os.UserHandle;
 import android.provider.Settings.Global;
 import android.util.Slog;
 
-import lineageos.providers.LineageSettings;
+import strixos.providers.LineageSettings;
 
 public final class LineageBatteryLights {
     private final String TAG = "LineageBatteryLights";
