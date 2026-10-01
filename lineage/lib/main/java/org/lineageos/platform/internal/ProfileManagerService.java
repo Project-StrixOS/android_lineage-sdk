@@ -438,7 +438,7 @@ public class ProfileManagerService extends LineageSystemService {
 
             mProfileNames.remove(old.getName());
             if (profile.getName() == null) {
-                profile.setName("");
+                profile.setName("default");
             }
             mProfileNames.put(profile.getName(), profile.getUuid());
             mProfiles.put(profile.getUuid(), profile);
@@ -559,7 +559,7 @@ public class ProfileManagerService extends LineageSystemService {
 
     private void addProfileInternal(Profile profile) {
         if (profile.getName() == null) {
-            profile.setName("");
+            profile.setName("default");
         }
         // Make sure this profile has all of the correct groups.
         for (NotificationGroup group : mGroups.values()) {
