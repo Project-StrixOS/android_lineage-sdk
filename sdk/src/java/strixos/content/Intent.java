@@ -35,7 +35,7 @@ public class Intent {
      * {@link Manifest.permission#STATUS_BAR_SERVICE} permission.
      */
     public static final String ACTION_SCREEN_CAMERA_GESTURE =
-            "lineageos.intent.action.SCREEN_CAMERA_GESTURE";
+            "strixos.intent.action.SCREEN_CAMERA_GESTURE";
 
     /**
      * Broadcast action: perform any initialization required for LineageHW services.
@@ -45,13 +45,13 @@ public class Intent {
      * Requires {@link lineageos.platform.Manifest.permission#HARDWARE_ABSTRACTION_ACCESS}.
      */
     public static final String ACTION_INITIALIZE_LINEAGE_HARDWARE =
-            "lineageos.intent.action.INITIALIZE_LINEAGE_HARDWARE";
+            "strixos.intent.action.INITIALIZE_LINEAGE_HARDWARE";
 
     /**
      * Broadcast action: lid state changed
      */
     public static final String ACTION_LID_STATE_CHANGED =
-            "lineageos.intent.action.LID_STATE_CHANGED";
+            "strixos.intent.action.LID_STATE_CHANGED";
 
     /**
      * This field is part of the intent {@link #ACTION_LID_STATE_CHANGED}.
@@ -64,5 +64,5 @@ public class Intent {
      * Broadcast action: notify SystemUI that LiveDisplay service has finished initialization.
      */
     public static final String ACTION_INITIALIZE_LIVEDISPLAY =
-            "lineageos.intent.action.INITIALIZE_LIVEDISPLAY";
+            "strixos.intent.action.INITIALIZE_LIVEDISPLAY";
 }

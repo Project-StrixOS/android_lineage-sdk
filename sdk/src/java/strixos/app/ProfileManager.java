@@ -55,7 +55,7 @@ public class ProfileManager {
      * or by calls to the ProfileManagerService / Profile.</p>
      */
     public static final String INTENT_ACTION_PROFILE_SELECTED =
-            "lineageos.platform.intent.action.PROFILE_SELECTED";
+            "strixos.platform.intent.action.PROFILE_SELECTED";
 
     /**
      * <p>Broadcast Action: Current profile has been updated. This is triggered every time the
@@ -64,14 +64,14 @@ public class ProfileManager {
      * trigger a profile selection, but causes its name to change.</p>
      */
     public static final String INTENT_ACTION_PROFILE_UPDATED =
-            "lineageos.platform.intent.action.PROFILE_UPDATED";
+            "strixos.platform.intent.action.PROFILE_UPDATED";
 
 
     /**
      * @hide
      */
     public static final String INTENT_ACTION_PROFILE_TRIGGER_STATE_CHANGED =
-            "lineageos.platform.intent.action.INTENT_ACTION_PROFILE_TRIGGER_STATE_CHANGED";
+            "strixos.platform.intent.action.INTENT_ACTION_PROFILE_TRIGGER_STATE_CHANGED";
 
     /**
      * @hide
