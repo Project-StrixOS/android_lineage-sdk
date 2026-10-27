@@ -5,10 +5,10 @@
 
 package org.lineageos.platform.internal.health;
 
-import static lineageos.health.HealthInterface.MODE_AUTO;
-import static lineageos.health.HealthInterface.MODE_LIMIT;
-import static lineageos.health.HealthInterface.MODE_MANUAL;
-import static lineageos.health.HealthInterface.MODE_NONE;
+import static strixos.health.HealthInterface.MODE_AUTO;
+import static strixos.health.HealthInterface.MODE_LIMIT;
+import static strixos.health.HealthInterface.MODE_MANUAL;
+import static strixos.health.HealthInterface.MODE_NONE;
 
 import static org.lineageos.platform.internal.health.Util.getTimeMillisFromSecondOfDay;
 import static org.lineageos.platform.internal.health.Util.msToString;
@@ -27,7 +27,7 @@ import android.os.ServiceManager;
 import android.text.format.DateUtils;
 import android.util.Log;
 
-import lineageos.providers.LineageSettings;
+import strixos.providers.LineageSettings;
 
 import org.lineageos.platform.internal.R;
 import org.lineageos.platform.internal.health.ccprovider.ChargingControlProvider;
@@ -35,7 +35,7 @@ import org.lineageos.platform.internal.health.ccprovider.Deadline;
 import org.lineageos.platform.internal.health.ccprovider.Limit;
 import org.lineageos.platform.internal.health.ccprovider.Toggle;
 
-import vendor.lineage.health.IChargingControl;
+import vendor.strix.health.IChargingControl;
 
 import java.io.PrintWriter;
 
@@ -463,9 +463,9 @@ public class ChargingControlController extends LineageHealthFeature {
     /**
      * Whether the current charging control mode supports supports the mode.
      * Available modes:
-     *     - ${@link lineageos.health.HealthInterface#MODE_AUTO}
-     *     - ${@link lineageos.health.HealthInterface#MODE_MANUAL}
-     *     - ${@link lineageos.health.HealthInterface#MODE_LIMIT}
+     *     - ${@link strixos.health.HealthInterface#MODE_AUTO}
+     *     - ${@link strixos.health.HealthInterface#MODE_MANUAL}
+     *     - ${@link strixos.health.HealthInterface#MODE_LIMIT}
      */
     private boolean isProvideSupportCCMode(int mode) {
         return mCurrentProvider.isChargingControlModeSupported(mode);

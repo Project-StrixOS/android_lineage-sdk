@@ -4,7 +4,7 @@
 //
 
 android_app {
-    name: "org.lineageos.platform-res",
+    name: "org.los.platform-res",
     use_resource_processor: false,
     sdk_version: "core_platform",
     certificate: "platform",
@@ -37,6 +37,8 @@ android_app {
         // Use id 0x3f (one less than app id).
         "--package-id",
         "63",
+
+        "--rename-manifest-package", "strixos.platform",
     ],
 
     resource_dirs: [
@@ -54,8 +56,8 @@ android_app {
 filegroup {
     name: "lineage-sdk-sources",
     srcs: [
-        "sdk/src/java/lineageos/**/*.java",
-        "sdk/src/java/lineageos/**/I*.aidl",
+        "sdk/src/java/strixos/**/*.java",
+        "sdk/src/java/strixos/**/I*.aidl",
     ],
 }
 
@@ -84,18 +86,18 @@ java_defaults {
         ":lineage-sdk-internal-sources",
         ":lineage-sdk-sources",
         // For the generated R.java and Manifest.java
-        ":org.lineageos.platform-res{.aapt.srcjar}",
+        ":org.los.platform-res{.aapt.srcjar}",
     ],
 
     static_libs: [
-        "vendor.lineage.health-V2-java",
-        "vendor.lineage.livedisplay-V1-java",
-        "vendor.lineage.touch-V1-java",
+        "vendor.strix.health-V2-java",
+        "vendor.strix.livedisplay-V1-java",
+        "vendor.strix.touch-V1-java",
     ],
 }
 
 java_library {
-    name: "org.lineageos.platform",
+    name: "org.los.platform",
     defaults: ["lineage-sdk-defaults"],
     installable: true,
     sdk_version: "core_platform",

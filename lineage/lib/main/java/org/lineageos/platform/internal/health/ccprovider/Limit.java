@@ -5,18 +5,18 @@
 
 package org.lineageos.platform.internal.health.ccprovider;
 
-import static lineageos.health.HealthInterface.MODE_AUTO;
-import static lineageos.health.HealthInterface.MODE_LIMIT;
-import static lineageos.health.HealthInterface.MODE_MANUAL;
+import static strixos.health.HealthInterface.MODE_AUTO;
+import static strixos.health.HealthInterface.MODE_LIMIT;
+import static strixos.health.HealthInterface.MODE_MANUAL;
 
 import android.content.Context;
 import android.util.Log;
 
 import org.lineageos.platform.internal.R;
 
-import vendor.lineage.health.ChargingControlSupportedMode;
-import vendor.lineage.health.ChargingLimitInfo;
-import vendor.lineage.health.IChargingControl;
+import vendor.strix.health.ChargingControlSupportedMode;
+import vendor.strix.health.ChargingLimitInfo;
+import vendor.strix.health.IChargingControl;
 
 import java.io.PrintWriter;
 

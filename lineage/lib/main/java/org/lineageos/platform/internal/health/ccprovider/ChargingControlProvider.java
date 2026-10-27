@@ -9,7 +9,7 @@ import android.content.Context;
 import android.os.RemoteException;
 import android.util.Log;
 
-import vendor.lineage.health.IChargingControl;
+import vendor.strix.health.IChargingControl;
 
 import java.io.PrintWriter;
 
@@ -78,7 +78,7 @@ public abstract class ChargingControlProvider {
     }
 
     /**
-     * Called when the mode is {@link lineageos.health.HealthInterface#MODE_LIMIT} and
+     * Called when the mode is {@link strixos.health.HealthInterface#MODE_LIMIT} and
      * the {@link android.content.Intent#ACTION_BATTERY_CHANGED} is received.
      *
      * @param currentPct Current battery percentage
@@ -90,16 +90,16 @@ public abstract class ChargingControlProvider {
     }
 
     /**
-     * Called when the mode is {@link lineageos.health.HealthInterface#MODE_AUTO} or
-     * {@link lineageos.health.HealthInterface#MODE_MANUAL} and the
+     * Called when the mode is {@link strixos.health.HealthInterface#MODE_AUTO} or
+     * {@link strixos.health.HealthInterface#MODE_MANUAL} and the
      * {@link android.content.Intent#ACTION_BATTERY_CHANGED} is received.
      *
      * @param batteryPct Current battery percentage
      * @param startTime  The time when the charging control should start
      * @param targetTime The expected time when the battery should be full
      * @param configMode The current charging control mode, either
-     *                   {@link lineageos.health.HealthInterface#MODE_AUTO} or
-     *                   {@link lineageos.health.HealthInterface#MODE_MANUAL}
+     *                   {@link strixos.health.HealthInterface#MODE_AUTO} or
+     *                   {@link strixos.health.HealthInterface#MODE_MANUAL}
      * @return Whether a notification should be posted
      */
     protected boolean onBatteryChanged(float batteryPct, long startTime, long targetTime,
@@ -142,16 +142,16 @@ public abstract class ChargingControlProvider {
     /**
      * Whether this provider supports the mode.
      * Available modes:
-     *     - ${@link lineageos.health.HealthInterface#MODE_AUTO}
-     *     - ${@link lineageos.health.HealthInterface#MODE_MANUAL}
-     *     - ${@link lineageos.health.HealthInterface#MODE_LIMIT}
+     *     - ${@link strixos.health.HealthInterface#MODE_AUTO}
+     *     - ${@link strixos.health.HealthInterface#MODE_MANUAL}
+     *     - ${@link strixos.health.HealthInterface#MODE_LIMIT}
      */
     public abstract boolean isChargingControlModeSupported(int mode);
 
     /**
      * Whether the HAL supports the mode or modes
      *
-     * @param mode One or more {@link vendor.lineage.health.ChargingControlSupportedMode}
+     * @param mode One or more {@link vendor.strix.health.ChargingControlSupportedMode}
      * @return Whether the provider supports the modes
      */
     public final boolean isHALModeSupported(int mode) {

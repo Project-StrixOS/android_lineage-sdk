@@ -43,12 +43,13 @@ public class PartsList {
 
     public static final String EXTRA_PART = ":lineage:part";
 
-    public static final String LINEAGEPARTS_PACKAGE = "org.lineageos.lineageparts";
+    public static final String LINEAGEPARTS_PACKAGE = "com.android.losparts";
+    public static final String LINEAGEPARTS_PACKAGE_P = "org.lineageos.lineageparts";
 
     public static final ComponentName LINEAGEPARTS_ACTIVITY = new ComponentName(
-            LINEAGEPARTS_PACKAGE, LINEAGEPARTS_PACKAGE + ".PartsActivity");
+            LINEAGEPARTS_PACKAGE, LINEAGEPARTS_PACKAGE_P + ".PartsActivity");
 
-    public static final String PARTS_ACTION_PREFIX = LINEAGEPARTS_PACKAGE + ".parts";
+    public static final String PARTS_ACTION_PREFIX = LINEAGEPARTS_PACKAGE_P + ".parts";
 
     private final Map<String, PartInfo> mParts = new ArrayMap<>();
 
@@ -79,7 +80,7 @@ public class PartsList {
                 if (r == null) {
                     return;
                 }
-                int resId = r.getIdentifier("parts_catalog", "xml", LINEAGEPARTS_PACKAGE);
+                int resId = r.getIdentifier("parts_catalog", "xml", LINEAGEPARTS_PACKAGE_P);
                 if (resId > 0) {
                     loadPartsFromResourceLocked(r, resId, mParts);
                 }
@@ -113,7 +114,7 @@ public class PartsList {
     }
 
     private void loadPartsFromResourceLocked(Resources res, int resid,
-                                             Map<String, PartInfo> target) {
+            Map<String, PartInfo> target) {
         XmlResourceParser parser = null;
 
         try {
@@ -130,7 +131,7 @@ public class PartsList {
             if (!"parts-catalog".equals(nodeName)) {
                 throw new RuntimeException(
                         "XML document must start with <parts-catalog> tag; found "
-                                + nodeName + " at " + parser.getPositionDescription());
+                        + nodeName + " at " + parser.getPositionDescription());
             }
 
             final int outerDepth = parser.getDepth();
@@ -196,7 +197,9 @@ public class PartsList {
         } catch (IOException e) {
             throw new RuntimeException("Error parsing catalog", e);
         } finally {
-            if (parser != null) parser.close();
+            if (parser != null) {
+                parser.close();
+            }
         }
     }
 }

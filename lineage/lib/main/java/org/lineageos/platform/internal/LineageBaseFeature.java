@@ -11,7 +11,7 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.UserHandle;
 
-import lineageos.providers.LineageSettings;
+import strixos.providers.LineageSettings;
 
 import org.lineageos.platform.internal.common.UserContentObserver;
 
