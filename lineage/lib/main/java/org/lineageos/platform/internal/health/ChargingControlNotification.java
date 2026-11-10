@@ -27,7 +27,7 @@ public class ChargingControlNotification {
 
     private static final int CHARGING_CONTROL_NOTIFICATION_ID = 1000;
     private static final String ACTION_CHARGING_CONTROL_CANCEL_ONCE =
-            "lineageos.platform.intent.action.CHARGING_CONTROL_CANCEL_ONCE";
+            "strixos.platform.intent.action.CHARGING_CONTROL_CANCEL_ONCE";
     private static final String CHARGING_CONTROL_CHANNEL_ID = "LineageHealthChargingControl";
 
     private final ChargingControlController mChargingControlController;

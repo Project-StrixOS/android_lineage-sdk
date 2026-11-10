@@ -5,17 +5,17 @@
  */
 package org.lineageos.platform.internal.display;
 
-import static lineageos.hardware.LiveDisplayManager.MODE_AUTO;
-import static lineageos.hardware.LiveDisplayManager.MODE_DAY;
-import static lineageos.hardware.LiveDisplayManager.MODE_OUTDOOR;
+import static strixos.hardware.LiveDisplayManager.MODE_AUTO;
+import static strixos.hardware.LiveDisplayManager.MODE_DAY;
+import static strixos.hardware.LiveDisplayManager.MODE_OUTDOOR;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Handler;
 
-import lineageos.hardware.LineageHardwareManager;
-import lineageos.hardware.LiveDisplayManager;
-import lineageos.providers.LineageSettings;
+import strixos.hardware.LineageHardwareManager;
+import strixos.hardware.LiveDisplayManager;
+import strixos.providers.LineageSettings;
 
 import java.io.PrintWriter;
 import java.util.BitSet;

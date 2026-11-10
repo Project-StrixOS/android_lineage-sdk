@@ -15,19 +15,19 @@ public class LineageNotification {
      * Used by light picker in Settings to force
      * notification lights on when screen is on.
      */
-    public static final String EXTRA_FORCE_SHOW_LIGHTS = "lineage.forceShowLights";
+    public static final String EXTRA_FORCE_SHOW_LIGHTS = "strix.forceShowLights";
 
     /**
      * Used by light picker in Settings to force
      * a specific light brightness.
      */
-    public static final String EXTRA_FORCE_LIGHT_BRIGHTNESS = "lineage.forceLightBrightness";
+    public static final String EXTRA_FORCE_LIGHT_BRIGHTNESS = "strix.forceLightBrightness";
 
     /**
      * Used by light picker in Settings to force
      * a specific light color.
      */
-    public static final String EXTRA_FORCE_COLOR = "lineage.forceColor";
+    public static final String EXTRA_FORCE_COLOR = "strix.forceColor";
 
     /**
      * Used by light picker in Settings to force
@@ -35,7 +35,7 @@ public class LineageNotification {
      *
      * Value must be greater than or equal to 0.
      */
-    public static final String EXTRA_FORCE_LIGHT_ON_MS = "lineage.forceLightOnMs";
+    public static final String EXTRA_FORCE_LIGHT_ON_MS = "strix.forceLightOnMs";
 
     /**
      * Used by light picker in Settings to force
@@ -43,5 +43,5 @@ public class LineageNotification {
      *
      * Value must be greater than or equal to 0.
      */
-    public static final String EXTRA_FORCE_LIGHT_OFF_MS = "lineage.forceLightOffMs";
+    public static final String EXTRA_FORCE_LIGHT_OFF_MS = "strix.forceLightOffMs";
 }

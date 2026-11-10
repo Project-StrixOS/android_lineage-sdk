@@ -5,10 +5,10 @@
  */
 package org.lineageos.platform.internal.display;
 
-import static lineageos.hardware.LiveDisplayManager.MODE_AUTO;
-import static lineageos.hardware.LiveDisplayManager.MODE_DAY;
-import static lineageos.hardware.LiveDisplayManager.MODE_NIGHT;
-import static lineageos.hardware.LiveDisplayManager.MODE_OFF;
+import static strixos.hardware.LiveDisplayManager.MODE_AUTO;
+import static strixos.hardware.LiveDisplayManager.MODE_DAY;
+import static strixos.hardware.LiveDisplayManager.MODE_NIGHT;
+import static strixos.hardware.LiveDisplayManager.MODE_OFF;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -20,10 +20,10 @@ import android.util.Range;
 import android.util.Slog;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
-import lineageos.hardware.LineageHardwareManager;
-import lineageos.hardware.LiveDisplayManager;
-import lineageos.providers.LineageSettings;
-import lineageos.util.ColorUtils;
+import strixos.hardware.LineageHardwareManager;
+import strixos.hardware.LiveDisplayManager;
+import strixos.providers.LineageSettings;
+import strixos.util.ColorUtils;
 
 import org.lineageos.platform.internal.display.TwilightTracker.TwilightState;
 

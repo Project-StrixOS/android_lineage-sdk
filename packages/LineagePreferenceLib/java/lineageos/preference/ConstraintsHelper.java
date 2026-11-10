@@ -31,7 +31,7 @@ import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceViewHolder;
 
-import lineageos.hardware.LineageHardwareManager;
+import strixos.hardware.LineageHardwareManager;
 
 import java.util.Arrays;
 import java.util.List;

@@ -8,7 +8,7 @@ import android.content.Context;
 
 import com.android.internal.widget.LockPatternUtils;
 
-import lineageos.providers.LineageSettings;
+import strixos.providers.LineageSettings;
 
 public class LineageLockPatternUtils extends LockPatternUtils {
     public LineageLockPatternUtils(Context context) {

@@ -15,7 +15,7 @@ import android.provider.Settings;
 import android.util.ArrayMap;
 import android.util.ArraySet;
 
-import lineageos.providers.LineageSettings;
+import strixos.providers.LineageSettings;
 
 import java.util.ArrayList;
 import java.util.List;

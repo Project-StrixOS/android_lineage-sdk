@@ -21,7 +21,7 @@ import android.os.UserHandle;
 import android.util.ArrayMap;
 import android.util.Log;
 
-import lineageos.platform.Manifest;
+import strixos.platform.Manifest;
 
 import java.util.HashSet;
 import java.util.Map;

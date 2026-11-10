@@ -14,12 +14,12 @@ import android.util.Log;
 
 import com.android.server.ServiceThread;
 
-import lineageos.app.LineageContextConstants;
-import lineageos.health.IHealthInterface;
+import strixos.app.LineageContextConstants;
+import strixos.health.IHealthInterface;
 
 import org.lineageos.platform.internal.LineageSystemService;
 
-import vendor.lineage.health.ChargingControlSupportedMode;
+import vendor.strix.health.ChargingControlSupportedMode;
 
 import java.io.FileDescriptor;
 import java.io.PrintWriter;

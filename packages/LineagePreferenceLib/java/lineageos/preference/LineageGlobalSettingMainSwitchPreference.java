@@ -13,7 +13,7 @@ import androidx.preference.PreferenceDataStore;
 import com.android.settingslib.widget.GroupSectionDividerMixin;
 import com.android.settingslib.widget.MainSwitchPreference;
 
-import lineageos.providers.LineageSettings;
+import strixos.providers.LineageSettings;
 
 public class LineageGlobalSettingMainSwitchPreference extends MainSwitchPreference
         implements GroupSectionDividerMixin {

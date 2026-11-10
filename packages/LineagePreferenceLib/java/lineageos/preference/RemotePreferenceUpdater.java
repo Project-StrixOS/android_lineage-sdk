@@ -12,7 +12,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.util.Log;
 
-import lineageos.platform.Manifest;
+import strixos.platform.Manifest;
 
 import java.util.Objects;
 

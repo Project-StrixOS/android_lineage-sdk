@@ -27,8 +27,8 @@ import android.text.TextUtils;
 import android.util.ArrayMap;
 import android.util.Slog;
 
-import lineageos.providers.LineageSettings;
-import lineageos.util.ColorUtils;
+import strixos.providers.LineageSettings;
+import strixos.util.ColorUtils;
 
 import java.util.Map;
 

@@ -23,10 +23,10 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.util.Pair;
 
-import lineageos.app.LineageContextConstants;
-import lineageos.providers.LineageSettings;
-import lineageos.trust.ITrustInterface;
-import lineageos.trust.TrustInterface;
+import strixos.app.LineageContextConstants;
+import strixos.providers.LineageSettings;
+import strixos.trust.ITrustInterface;
+import strixos.trust.TrustInterface;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -40,7 +40,7 @@ public class TrustInterfaceService extends LineageSystemService {
     private static final String PLATFORM_SECURITY_PATCHES = "ro.build.version.security_patch";
     private static final String VENDOR_SECURITY_PATCHES = "ro.vendor.build.security_patch";
     private static final String LINEAGE_VENDOR_SECURITY_PATCHES =
-            "ro.lineage.build.vendor_security_patch";
+            "ro.los.build.vendor_security_patch";
 
     private static final String INTENT_PARTS = "org.lineageos.lineageparts.TRUST_INTERFACE";
     private static final String INTENT_ONBOARDING = "org.lineageos.lineageparts.TRUST_HINT";
